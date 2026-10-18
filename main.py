@@ -1,4 +1,5 @@
-
+from dotenv import load_dotenv
+load_dotenv()
 import requests
 import pandas as pd
 import mysql.connector
@@ -50,10 +51,10 @@ def extract_data():
 
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user=os.getenv("MYSQL_HOST_USER", "root"),
+        host=os.getenv("MYSQL_HOST", "localhost"),
+        user=os.getenv("MYSQL_USER", "root"),
         password=os.environ["MYSQL_PASSWORD"],
-        database="weather_db"
+        database=os.getenv("MYSQL_DATABASE", "weather_db")
     )
 
 

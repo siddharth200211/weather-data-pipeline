@@ -1,3 +1,4 @@
 timestamp,temperature,humidity,wind_speed,weather_category
 2026-10-18 15:45:00,33.3,32.0,11.5,Hot
 2026-10-18 16:00:00,33.0,32.0,12.0,Hot
+2026-10-18 20:15:00,30.0,40.0,1.4,Hot
